@@ -1,0 +1,437 @@
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+
+  background: #edeff3;
+overflow-x: hidden;
+  
+
+
+}*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: conic-gradient(from 180deg at 50% 45%,
+      #ffffff 0deg 100deg,
+      /* Top-Left: Yellow */
+      #f7d046 100deg 160deg,
+      /* Top-Right: White */
+      #ffffff 150deg 240deg,
+      #f57ba4 240deg 360deg,
+      /* Bottom-Right: Pink */
+      #808080 270deg 360deg
+      /* Bottom-Left: Grey */
+    );
+  min-height: 30%;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.browser-mockup-frame {
+  background: white;
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 15px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  /* Corners gol rakhne ke liye */
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: clamp(24px, 4vw, 42px);
+}
+
+h2 {
+  font-size: clamp(20px, 3vw, 32px);
+}
+
+/* MAIN MOBILE CONTAINER */
+
+.wrapper {
+
+  width: 100%;
+
+  max-width: 900px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 5vw;
+  background: white;
+}
+
+.logo {
+  font-size: clamp(16px, 2.5vw, 24px);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2vw;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #666;
+  font-size: clamp(10px, 1.2vw, 16px);
+}
+
+.book-btn {
+  padding: 0.5vw 1.5vw;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: none;
+  font-size: clamp(10px, 1.2vw, 14px);
+  cursor: pointer;
+  background-color: #ee98ae;
+  color: white;
+}
+
+.book-btn:hover {
+
+  background: #ec426c;
+
+  color: white;
+
+}
+
+/* 3. HERO SECTION (Main Horizontal Layout) */
+.hero {
+  display: flex;
+  flex-direction: row;
+  /* Hamesha line mein rahega */
+  flex-wrap: nowrap;
+  /* Niche nahi girega */
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 2vw;
+  gap: 3vw;
+  /* Scaling gap */
+  min-height: 200px;
+  background: #f5e0e0;
+  text-align: center;
+}
+
+/* Hero Images */
+.hero-img {
+  /* Image width screen ke mutabiq 20% hogi, magar limits ke sath */
+  width: clamp(60px, 22vw, 250px);
+  flex-shrink: 0;
+  /* Image ko pichakne se rokta hai */
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  /* Jaisa image mein hai */
+  display: block;
+}
+
+/* Hero Text Content */
+.hero-content {
+  flex: 1;
+  min-width: 120px;
+}
+
+.hero-content h1 {
+  /* Text 16px se 45px ke darmiyan scale hoga */
+  font-size: clamp(16px, 4.5vw, 48px);
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 1.5vw;
+}
+
+.hero-content p {
+  font-size: clamp(10px, 1.5vw, 18px);
+  color: #777;
+  margin-bottom: 2vw;
+}
+
+.get-started-btn {
+  background-color: #ee98ae;
+  /* Pinkish shade */
+  color: white;
+  border: none;
+  padding: 1vw 2.5vw;
+  border-radius: 50px;
+  font-size: clamp(10px, 1.3vw, 16px);
+  cursor: pointer;
+}
+
+
+
+.get-started-btn:hover {
+  background: #ec426c;
+}
+
+/* trusted */
+
+.trusted {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.trusted-text {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.trusted-logos {
+
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+
+}
+
+.trusted-logos img {
+  height: 30px;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  /* Max width limits growth */
+  min-width: 250px;
+  /* Min width for tiny screens */
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header-section h2 {
+  /* Clamp ensures text doesn't get TOO small or TOO big */
+  font-size: clamp(18px, 4vw, 36px);
+  color: #333;
+  margin-bottom: 1.5vw;
+}
+
+.header-section p {
+  font-size: clamp(10px, 1.5vw, 16px);
+  color: #666;
+  margin-bottom: 4vw;
+}
+
+
+.services-grid {
+  display: grid;
+  /* Force 3 columns ALWAYS - won't break layout */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  /* Gap scales with screen */
+}
+
+/* 5. Card Styling */
+.card {
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 1.5vw;
+  /* Rounded corners scale */
+  padding: 3vw 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: #ffcc00;
+  /* Subtle hover effect */
+}
+
+/* Icon Scaling */
+.icon-box {
+  width: 6vw;
+  height: 6vw;
+  min-width: 40px;
+  min-height: 40px;
+  margin-bottom: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* Card Text Scaling */
+.card h3 {
+  font-size: clamp(10px, 1.8vw, 18px);
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.8vw;
+}
+
+.card p {
+  font-size: clamp(8px, 1.2vw, 14px);
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Colors for icons/borders like image */
+.card-1 {
+  border-bottom: 4px solid #f9ca24;
+}
+
+.card-2 {
+  border-bottom: 4px solid #6ab04c;
+}
+
+.card-3 {
+  border-bottom: 4px solid #f0932b;
+}
+
+.card-4 {
+  border-bottom: 4px solid #eb4d4b;
+}
+
+.card-5 {
+  border-bottom: 4px solid #7ed6df;
+}
+
+.card-6 {
+  border-bottom: 4px solid #22a6b3;
+}
+
+.site-footer {
+  background-color: #ffffff;
+  padding: 60px 20px 30px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+  margin-bottom: 40px;
+}
+
+.footer-top .logo {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Horizontal Row for Items */
+.footer-links-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* Har item ke beech ka gap */
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Individual Item (Icon over Text) */
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  /* Icon upar, text niche */
+  align-items: center;
+  text-decoration: none;
+  color: #555;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-item:hover {
+  transform: translateY(-5px);
+  /* Hover effect */
+  color: #000;
+}
+
+.f-icon {
+  font-size: 24px;
+  /* Icon ka size */
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.f-text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+}
+
+fb .f-icon {
+  color: #1877F2;
+}
+
+/* Instagram Gradient Style */
+.insta .f-icon {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+fb .f-icon {
+  color: #1877F2;
+}
+
+/* Instagram Gradient Style */
+.insta .f-icon {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+fb .f-icon {
+  color: #1877F2;
+}
+
+/* Instagram Gradient Style */
+.insta .f-icon {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.footer-item:hover .f-icon {
+  transform: scale(1.2);
+  /* Hover pe icon thoda bada hoga */
+}
+
+.footer-bottom {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+  .footer-links-row {
+    gap: 20px;
+  }
+}
