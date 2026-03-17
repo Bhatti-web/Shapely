@@ -1,18 +1,4 @@
-/* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-body {
-
-  background: #edeff3;
-overflow-x: hidden;
-  
-
-
-}*/
 body {
   margin: 0;
   padding: 0;
@@ -238,7 +224,14 @@ nav {
   color: #666;
   margin-bottom: 4vw;
 }
-
+.main-wrapper {
+    width: 80%;
+    max-width: 1100px;
+    min-width: 250px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+}
 
 .services-grid {
   display: grid;
@@ -418,7 +411,7 @@ fb .f-icon {
 
 .footer-item:hover .f-icon {
   transform: scale(1.2);
-  /* Hover pe icon thoda bada hoga */
+  
 }
 
 .footer-bottom {
@@ -427,11 +420,51 @@ fb .f-icon {
   color: #999;
   font-size: 12px;
 }
-
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
 /* Mobile Friendly */
 @media (max-width: 600px) {
   .footer-links-row {
     gap: 20px;
+  }
+}
+
+  @media (max-width: 768px) {
+
+  nav {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    margin-left: auto; /* RIGHT side */
+  }
+
+  .book-btn {
+    display: none; /* optional */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 }
