@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Shapely</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
- <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="icon" type="image/png" href="logo.png">
 
     <link rel="stylesheet" href="styless.css">
 
@@ -18,6 +18,7 @@
     <div class="browser-mockup-frame">
         <!-- NAVBAR -->
         <nav>
+        
             <div class="logo">Shapely</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
@@ -27,7 +28,12 @@
                 <li><a href="#">Insights</a></li>
             </ul>
             <button class="book-btn">Book now</button>
+             <!-- Hamburger Icon -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
         </nav>
+
         <!-- Hero Section -->
         <section class="hero">
             <!-- Left Image -->
@@ -118,49 +124,56 @@
             </div>
         </section>
         <footer class="site-footer">
-    <!-- Top Section (Centered) -->
-    <div class="footer-top">
-        <div class="logo">Shapely</div>
-        <p>Achieve the best shape of your life with personalized weight loss plans from medical experts.</p>
-    </div>
+            <!-- Top Section (Centered) -->
+            <div class="footer-top">
+                <div class="logo">Shapely</div>
+                <p>Achieve the best shape of your life with personalized weight loss plans from medical experts.</p>
+            </div>
 
-    <!-- Links with Icons (Horizontal & Stacked) -->
-    <div class="footer-links-row">
-        <a href="#" class="footer-item">
-            <span class="f-icon">🏠</span>
-            <span class="f-text">Home</span>
-        </a>
-        <a href="#" class="footer-item">
-            <span class="f-icon">💰</span>
-            <span class="f-text">Pricing</span>
-        </a>
-        <a href="#" class="footer-item">
-            <span class="f-icon">📝</span>
-            <span class="f-text">Blog</span>
-        </a>
-        <a href="#" class="footer-item">
-            <span class="f-icon">🤝</span>
-            <span class="f-text">About</span>
-        </a>
-        <a href="#" class="footer-item">
-            <span class="f-icon">📷</span>
-            <span class="f-text">Instagram</span>
-        </a>
-        <a href="#" class="footer-item">
-            <span class="f-icon">🔵</span>
-            <span class="f-text">Facebook</span>
-        </a>
-    </div>
-    
-    
+            <!-- Links with Icons (Horizontal & Stacked) -->
+            <div class="footer-links-row">
+                <a href="#" class="footer-item">
+                    <span class="f-icon">🏠</span>
+                    <span class="f-text">Home</span>
+                </a>
+                <a href="#" class="footer-item">
+                    <span class="f-icon">💰</span>
+                    <span class="f-text">Pricing</span>
+                </a>
+                <a href="#" class="footer-item">
+                    <span class="f-icon">📝</span>
+                    <span class="f-text">Blog</span>
+                </a>
+                <a href="#" class="footer-item">
+                    <span class="f-icon">🤝</span>
+                    <span class="f-text">About</span>
+                </a>
+                <a href="#" class="footer-item">
+                    <span class="f-icon">📷</span>
+                    <span class="f-text">Instagram</span>
+                </a>
+                <a href="#" class="footer-item">
+                    <span class="f-icon">🔵</span>
+                    <span class="f-text">Facebook</span>
+                </a>
+            </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 Shapely. All rights reserved.</p>
-    </div>
-</footer>
+
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Shapely. All rights reserved.</p>
+            </div>
+        </footer>
 
     </div>
+    <script>
+  const toggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 </body>
 
 </html>
